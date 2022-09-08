@@ -1,5 +1,5 @@
 #include <stdio.h>
-i
+
 /**
  * main- entrypoint
  * Description: sizes of the data types
