@@ -5,7 +5,6 @@
  * Description: combine single digit numbers
  * Return: 0 as success
  */
-
 int main(void)
 {
 	int num;
@@ -20,6 +19,7 @@ int main(void)
 		putchar(' ');
 	}
 
-
 	putchar('\n');
+
+	return (0);
 }
