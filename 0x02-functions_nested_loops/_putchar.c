@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  *main- entrypoint
@@ -6,17 +7,7 @@
  * Return: 0 always
  */	
 
-int main(void)
+int _putchar(char c)
 {
-	int _putchar(char c)
-	{
-		while (*c)
-		{
-			_putchar(*c);
-			c++;
-		}
-		_putchar('\n');
-
-		return (0);
-	}
+	return (write(1, &c, 1));
 }

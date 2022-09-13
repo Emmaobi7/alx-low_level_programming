@@ -2,7 +2,7 @@
 
 
 /**
- * main- entrypoint
+ * print_alphabet- entrypoint
  * Description: function to print alphabets
  * Return: 0 always
  */
