@@ -2,15 +2,15 @@
 
 /**
  * _islower- check lowercased
- * @c: integer type c
+ * @c: integer type c to be checked
  *
  * Description: function to check lowercase x
- * Return: 1 for true
+ * Return: 1 for lowercase and 1 if not lowercased
  */
 
 int _islower(int c)
 {
-	if (c == 'z' - 'a')
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}
