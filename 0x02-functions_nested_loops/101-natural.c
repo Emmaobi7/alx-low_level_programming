@@ -17,10 +17,11 @@ int main(void)
 	{
 		if ((i % x == 0) || (i % y == 0))
 		{
-			res += 1;
+			res += i;
 		}
 	}
 	printf("%d\n", res);
+
 	return (0);
 }
 
