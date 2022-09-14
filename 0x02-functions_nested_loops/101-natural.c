@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int i, n = 10;
+	int i, n = 1024;
 	int x = 5;
 	int y = 3;
 	int res = 0;
@@ -19,9 +19,8 @@ int main(void)
 		{
 			res += 1;
 		}
-		printf("%d\n", res);
-	
 	}
+	printf("%d\n", res);
 	return (0);
 }
 
