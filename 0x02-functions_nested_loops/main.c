@@ -2,6 +2,7 @@
 
 int main(void)
 {
-	print_to_98(98);
+	print_times_table(9);
+	_putchar('\n');
 	return (0);
 }
