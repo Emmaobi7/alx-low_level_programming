@@ -1,4 +1,4 @@
-#include <stdio.h>
+include <stdio.h>
 /**
  * _strcmp - Compare two strings, output int based on comparison
  * @s1: First string to compare
