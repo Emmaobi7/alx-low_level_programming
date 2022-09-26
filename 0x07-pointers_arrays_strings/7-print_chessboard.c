@@ -3,7 +3,7 @@
 /**
  * print_chessboard- prints a chess board
  * @a: pointer to array
- * 
+ *
  * Return: nothing
  */
 
