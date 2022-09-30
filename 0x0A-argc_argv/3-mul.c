@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main- entrybpoint
@@ -28,5 +29,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+	return (0);
 }
 
