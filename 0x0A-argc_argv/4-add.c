@@ -3,6 +3,8 @@
 
 /**
  * main- entry point
+ * @argc: argument count
+ * @argv: argument vector
  * Description: prints sum of positive numbers
  *
  * Return: 1 on error
@@ -29,10 +31,11 @@ int main(int argc, char *argv[])
 		for (j = 0; argv[i][j]; j++)
 		{
 			if (!(isdigit(argv[i][j])))
-					{
-					printf("Error\n");
-					return (1);
-					}
+			{
+				printf("Error\n");
+				return (1);
+			}
+
 		}
 		x += atoi(argv[i]);
 		i++;

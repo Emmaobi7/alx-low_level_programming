@@ -2,6 +2,8 @@
 
 /**
  * main- entry point
+ * @argc: argument to main count
+ * @argv: argument vector
  * description: prints name of program
  *
  * Return: 0

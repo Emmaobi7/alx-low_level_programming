@@ -3,6 +3,8 @@
 
 /**
  * main- entrypoint
+ * @argc: argument count
+ * @argv: argument vector
  * Description: prints number of arguments to man
  *
  * Return: 0

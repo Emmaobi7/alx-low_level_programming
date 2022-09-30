@@ -2,8 +2,9 @@
 
 /**
  * main- entrypoint
+ * @argc: argument count
+ * @argv: argument vector
  * Description: prints all its arguments
- * 
  * Return: 0
  */
 
