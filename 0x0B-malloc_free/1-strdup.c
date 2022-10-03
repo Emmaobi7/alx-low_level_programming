@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * _strdup- returns copy of string 
+ * _strdup- returns copy of string
  * @str: pointer to string
  * Return: pointer to duplicate string
  */
@@ -38,6 +38,5 @@ char *_strdup(char *str)
 		p[index] = str[index];
 		index++;
 	}
-	
 	return (p);
 }
