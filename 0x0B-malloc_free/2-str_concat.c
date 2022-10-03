@@ -1,60 +1,48 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+#include <stdio.h>
 
 /**
- * str_concat- concatenates two strings
- * @s1: destination string
- * @s2: source string
- * Return: pointer to s1
+ * str_concat - Concatenate (combine) two strings
+ * @s1: First string
+ * @s2: Second string
+ *
+ * Return: Pointer to new space in memory, NULL if it fails
  */
-
-
-
-
-
-
 char *str_concat(char *s1, char *s2)
 {
-	char *p;
-	int len1, len2, index, index2;
-	int n;
+	char *s3, *empt;
+	int i, len1, len2, j;
 
-	len2 = 0;
-	len1 = 0;
-	index = 0;
-	index2 = 0;
-
-	if (s1 == NULL || s2 == NULL)
-		return (" ");
-
+	empt = "";
+	if (s1 == NULL)
+		s1 = empt;
+	if (s2 == NULL)
+		s2 = empt;
+	i = len1 = len2 = 0;
 	while (s1[len1] != '\0')
 	{
 		len1++;
 	}
-
 	while (s2[len2] != '\0')
 	{
 		len2++;
 	}
 	len2++;
-	n = len1 + len2;
-
-	p = malloc(sizeof(*s1) * n);
-
-	if (p == NULL)
+	s3 = malloc((len1 + len2) * sizeof(*s1));
+	if (s3 == NULL)
 		return (NULL);
-
-	while (s1[index] != '\0')
+	i = 0;
+	while (i < len1)
 	{
-		p[index] = s1[index];
-		index++;
+		s3[i] = s1[i];
+		i++;
 	}
-	while (s2[index2] != '\0')
+	j = 0;
+	while (j <= len2)
 	{
-		p[len1 + index2] = s2[index2];
-		index2++;
+		s3[i] = s2[j];
+		i++;
+		j++;
 	}
-	return (p);
+	return (s3);
 }
-
