@@ -1,36 +1,40 @@
-#include <stdio.h>
+#include "holberton.h"
 #include <stdlib.h>
-#include "main.h"
 
 /**
- * argstostr- concatnate command line arguments
- * @ac: argument count
- * @av: argument vector
+ * argstostr - concatenates all the arguments of your program.
+ * @ac: number of arguments
+ * @av: double pointer to arguments
  *
- * Return: pointer to new string
+ * Return:pointer to new string, or NULL if error
  */
-
-
-
-
 char *argstostr(int ac, char **av)
 {
-	int i;
-	char *p;
-	int j = 0;
+	int i, j, k = 0, n = 0;
+	char *s;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
-	p = malloc(sizeof(char *) * ac);
-	if (p == NULL)
+	if (ac <= 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; *av[j]; j++)
-			p[i] = *av[j];
-		_putchar('\n');
+		for (j = 0; av[i][j]; j++)
+			n++;
+		n++;
 	}
-
-	_putchar('\n');
-	return (p);
+	n++;
+	s = malloc(n * sizeof(char));
+	if (s == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++)
+		{
+			s[k] = av[i][j];
+			k++;
+		}
+		s[k] = '\n';
+		k++;
+	}
+	s[k] = '\0';
+	return (s);
 }
