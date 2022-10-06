@@ -1,57 +1,42 @@
+#include "holberton.h"
 #include <stdlib.h>
-#include "main.h"
 
 /**
- * string_nconcat- concatenate two strings
- * @s1: destination string
- * @s2: source string
- * @n: number of chars to concatenate
- * Return: pointer to new string
+ * string_nconcat - concatenates two strings.
+ * @s1: first string to copy
+ * @s2: second string to copy
+ * @n: number of bytes of s2 to copy
+ *
+ * Return: char pointer to newly allocated place in memory
  */
-
-
-
-
-
-
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, j, k;
-	unsigned int x;
-	char *p;
+	unsigned int i, j, k;
+	char *s;
 
 	if (s1 == NULL)
-		s1 = " ";
+		i = 0;
+	else
+	{
+		for (i = 0; s1[i]; i++)
+			;
+	}
 	if (s2 == NULL)
-		s2 = " ";
-	i = 0;
-	while (s1[i] != '\0')
+		j = 0;
+	else
 	{
-		i++;
+		for (j = 0; s2[j]; j++)
+			;
 	}
-	j = 0;
-	while (s2[j] != '\0')
-	{
-		j++;
-	}
-	p = malloc(sizeof(*s1) * (i + n + 1));
-	if (p == NULL)
+	if (j > n)
+		j = n;
+	s = malloc(sizeof(char) * (i + j + 1));
+	if (s == NULL)
 		return (NULL);
-	k = 0;
-	while (k < i)
-	{
-		p[k] = s1[k];
-		k++;
-	}
-	x = 0;
-	while (x < n)
-	{
-		p[i + x] = s2[x];
-		x++;
-	}
-	p[i] = '\0';
-	return (p);
+	for (k = 0; k < i; k++)
+		s[k] = s1[k];
+	for (k = 0; k < j; k++)
+		s[k + i] = s2[k];
+	s[i + j] = '\0';
+	return (s);
 }
-
-
