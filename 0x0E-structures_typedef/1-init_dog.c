@@ -8,9 +8,6 @@
  * @age: dog age
  * @owner: dof owner
  *
- * 
- *
- *
  * Return: nothing
  */
 
