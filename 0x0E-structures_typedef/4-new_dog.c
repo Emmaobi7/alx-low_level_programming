@@ -44,8 +44,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	
 
-	if (name == NULL || owner == NULL)
-		return (NULL);
 
 	len1 = len2 = 0;
 	while (name[len1]!= '\0')
@@ -75,7 +73,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog->name = _string_copy(new_dog->name, name);
 	new_dog->age = age;
 	new_dog->owner = _string_copy(new_dog->owner, owner);
-	free(new_dog);
 
 	return (new_dog);
 }
