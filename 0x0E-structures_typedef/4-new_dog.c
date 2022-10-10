@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * string_copy- copies a string
+ * _string_copy- copies a string
  * @dest1: destination string
  * @dest2: source string
  * Return: poibter to new string
@@ -42,16 +42,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *new_dog;
 	int len1, len2;
 
-	
-
-
 	len1 = len2 = 0;
-	while (name[len1]!= '\0')
+	while (name[len1] != '\0')
 	{
 		len1++;
 	}
 	len1++;
-	
 	while (owner[len2] != '\0')
 	{
 		len2++;
