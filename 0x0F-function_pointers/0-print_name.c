@@ -15,14 +15,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	int i;
-
-	i = 0;
-	while (name[i] != '\0')
-	{
-		_putchar(i);
-		i++;
-	}
-
-	f(name);
+	if (name != NULL && f != NULL)
+		f(name);
 }
