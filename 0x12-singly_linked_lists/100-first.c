@@ -1,17 +1,14 @@
-#include "stdio.h"
+#include <stdio.h>
 
-void startup_func(void) __attribute__ ((constructor));
+void first(void) __attribute__ ((constructor));
 
 /**
- * startup_func- func that exec before main()
- * Return: nothing
+ * first - prints something before main
+ *
+ * Return: void
  */
-
-
-
-
-
-void startup_func(void)
+void first(void)
 {
-	printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }

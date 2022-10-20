@@ -1,22 +1,21 @@
+extern printf
+
 section .text
-    default rel
-    extern printf
-    global main
+   global main
+
 main:
-    ; Create a stack-frame, re-aligning the stack to 16-byte alignment before calls
-    push rbp
+   push rbp
 
-    mov	rdi, fmt
-    mov	rsi, message
-    mov	rax, 0
+   mov rdi,fmt
+   mov rsi,msg
+   mov rax,0
+   call printf
 
-    ; Call printf
-    call printf wrt ..plt
-    
-    pop	rbp		; Pop stack
+   pop rbp
 
-    mov	rax,0	; Exit code 0
-    ret			; Return
+   mov rax,0
+   ret
+
 section .data
-    message:  db        "Hello, Holberton", 10, 0
-    fmt:    db "%s", 10, 0
+   msg: db "Hello, Holberton", 0
+   fmt: db "%s", 10, 0
