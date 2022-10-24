@@ -3,7 +3,7 @@
 /**
  * listint_len- counts n elments in list
  * @h: furst node
- * Return: positive number 
+ * Return: positive number
  */
 
 
@@ -22,5 +22,5 @@ size_t listint_len(const listint_t *h)
 		N_list++;
 		h = h->next;
 	}
-	return(N_list);
+	return (N_list);
 }

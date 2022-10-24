@@ -2,7 +2,7 @@
 
 /**
  * pop_listint- deletes head node
- * @h: address of start node
+ * @head: address of start node
  * Return: data
  */
 
@@ -24,7 +24,6 @@ int pop_listint(listint_t **head)
 		n = p->n;
 		p = p->next;
 	}
-	
 	free(p);
 	return (n);
 }

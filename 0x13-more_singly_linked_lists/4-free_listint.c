@@ -2,7 +2,7 @@
 
 /**
  * free_listint- frees a listint_t list
- * @h: start node
+ * @head: start node
  * Return: nothing
  */
 

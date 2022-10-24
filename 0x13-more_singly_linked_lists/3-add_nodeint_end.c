@@ -2,7 +2,7 @@
 
 /**
  * add_nodeint_end- adds new node at end of list
- * @h: address of start node
+ * @head: address of start node
  * @n: data at address
  * Return: address on success
  */

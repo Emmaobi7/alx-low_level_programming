@@ -2,7 +2,7 @@
 
 /**
  * free_listint2- frees listsint_t
- * @h: address of start node
+ * @head: address of start node
  * Return: nothing
  */
 
