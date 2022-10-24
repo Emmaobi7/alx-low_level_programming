@@ -5,6 +5,7 @@
  * @head: address of new node
  * @idx: index to insert node
  * @n: data at address
+ * Return: index
  */
 
 
