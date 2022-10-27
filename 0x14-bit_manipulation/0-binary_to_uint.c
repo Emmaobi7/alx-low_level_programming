@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * binary_to_unit- converts binary to decimal
+ * binary_to_uint- converts binary to decimal
  * @b: pointer to binary string
  * Return: 0 on failure
  */

@@ -8,14 +8,8 @@
 
 
 
-
-
-
-
-
 void printbit(unsigned long int n)
 {
-	unsigned long int i;
 	if (n > 1)
 		printbit(n >> 1);
 	_putchar(n % 2 + '0');
