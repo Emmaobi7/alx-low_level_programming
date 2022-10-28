@@ -14,29 +14,25 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
-	unsigned int sum, n;
+	unsigned int i, len;
+	unsigned int decval;
 
-	i = 0;
-	sum = 0;
-
+	i = len = decval = 0;
 	if (b == NULL)
 		return (0);
-	while (b[i] != '\0')
+	while (b[len] != '\0')
 	{
-		if (b[i] != '1' || b[i] != '0')
-		{
-			i++;
-		}
+		if (b[len] == '0' || b[len] == '1')
+			len++;
 		else
 			return (0);
 	}
-
-	for (n = 0; b[n] != '\0'; n++)
+	while (i < len)
 	{
-		sum = sum << 1;
-		if (b[n] == '1')
-			sum += 1;
+		decval = decval << 1;
+		if (b[i] == '1')
+			decval += 1;
+		i++;
 	}
-	return (sum);
+	return (decval);
 }
